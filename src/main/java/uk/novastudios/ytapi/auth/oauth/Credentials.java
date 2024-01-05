@@ -12,19 +12,19 @@ public abstract class Credentials {
      * Obtains a new user auth code
      * @return A Youtube auth code
      */
-    public abstract AuthCode GetCode();
+    public abstract AuthCode getCode() throws Exception;
 
     /**
      * Verifies user auth code
      * @param deviceCode Code used to verify
      * @return A refreshable Youtube auth token
      */
-    public abstract RefreshableToken TokenFromCode(String deviceCode);
+    public abstract RefreshableToken tokenFromCode(String deviceCode) throws Exception;
 
     /**
      * Request a new access token using a given refreshToken
      * @param refreshToken Token used to refresh
      * @return A Youtube auth token
      */
-    public abstract BaseToken RefreshToken(String refreshToken);
+    public abstract BaseToken refreshToken(String refreshToken) throws Exception;
 }
